@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How The Internet Works</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Docker Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Docker, Linux, and Containerization
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="Containerization.html">Containerization</a>
+                    <a class="dropdown-item" href="Comparision.html">Virtualization vs Containerization</a>
+                    <a class="dropdown-item" href="WebServerTutorial.html">Web server setup using docker</a>
+                    <a class="dropdown-item" href="Linuxcommand.html">Linux commands and Docker log in</a>
+                    <a class="dropdown-item" href="Pycharm.html">Using Docker and Pycharm to write python code</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="jumbotron jumbotron-fluid" id="aboutJumbotron">
+    <div class="container">
+        <h1 class="display-4">Linux Commands and Docker Login</h1>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8" >
+        <h4 class="mt-3" id="tips">Tips &amp; Tricks</h4>
+        <p>
+            You can use <code>clear</code> to clear the terminal if it gets filled up with too many commands.
+        </p>
+        <p>
+            The <code>tab</code> key is used for autocomplete. For example, type <code>cd Doc</code> and hit
+            <code>tab</code> and the terminal will autocomplete <code>cd Documents</code>.
+        </p>
+        <p>
+            <code>Ctrl+C</code> can be used to stop a command in terminal safely.
+        </p>
+        <p>
+            If that doesn't stop the command, <code>Ctrl+Z</code> can be used to force stop it.
+        </p>
+        <p>
+            You can exit from the terminal by using the <code>exit</code> command.
+        </p>
+        <p>
+            You can power off or reboot the computer by using the commands <code>sudo halt</code> and <code>sudo
+            reboot</code>.
+        </p>
+        <h4 class="mt-5" id="docker">Docker Login</h4>
+        <p>
+            <code>docker ps</code> will give you a list of your docker containers.
+        </p>
+        <p>
+            <code>docker exec -it CONTAINER_NAME /bin/bash</code> will give you a bash shell in the container.
+        </p>
+        <p>
+            <code>docker exec -it CONTAINER_NAME COMMAND</code> will execute the COMMAND in the container.
+        </p>
+        <h3 class="display-6 mt-5">Basic Linux Commands</h3>
+        <h4 class="font-monospace mt-3" id="pwd">pwd</h4>
+        <p>
+            When you first open the terminal, you are in the home directory of your user. To know which directory you
+            are in, you can use the <code>pwd</code> command. It gives us the absolute path, which means the path that
+            starts from the root. The root is the base of the Linux file system. It is denoted by a forward slash
+            <code>/</code>. The user directory is usually something like <code>/home/username</code>.
+        </p>
+        <h4 class="font-monospace mt-5" id="ls">ls</h4>
+        <p>
+            Use the <code>ls</code> command to know what files are in the directory you are in. You can see all the
+            hidden files by using the command <code>ls -a</code>.
+        </p>
+        <h4 class="font-monospace mt-5" id="cd">cd</h4>
+        <p>
+            Use the <code>cd</code> command to go to a directory. For example, if you are in the home directory, and you
+            want to go to the Downloads directory, you type <code>cd Downloads</code>. Remember, this command
+            is case sensitive, so you have to type in the name of the directory exactly as it is.
+        </p>
+        <p>
+            But what if there's a space? Imagine you have a directory named <code>Raspberry Pi</code>. In this case,
+            when you type <code>cd Raspberry Pi</code>, the shell will take the second argument <code>Pi</code> of the
+            command as a different one, so you will get an error saying that the directory does not exist. Here, you
+            must use an escape character - the backward slash <code>\</code>. The command would look like <code>cd
+            Raspberry\ Pi</code>.
+        </p>
+        <p>
+            If you just type <code>cd</code> and press enter, it takes you to the home directory. To go up one level
+            to the parent directory, you can type <code>cd ..</code>. The two dots represent the parent directory.
+        </p>
+        <h4 class="font-monospace mt-5" id="dir">mkdir &amp; rmdir</h4>
+        <p>
+            Use the <code>mkdir</code> command to create a directory. For example, if you want to make a
+            directory called <code>DIY</code>, type <code>mkdir DIY</code>. Remember, if you want to create a
+            directory named <code>DIY Hacking</code>, then you need to escape the space character using a backslash
+            <code>\</code>. The command would be <code>mkdir DIY\ Hacking</code>.
+        </p>
+        <p>
+            Use <code>rmdir</code> to delete a directory. <code>rmdir</code> can only be used to delete an empty
+            directory. To delete a directory containing files, use <code>rm</code>.
+        </p>
+        <h4 class="font-monospace mt-5" id="rm">rm</h4>
+        <p>
+            Use the <code>rm</code> command to delete files and directories. Use <code>rm -r</code> to delete a
+            directory. This deletes the directory and the files it contains.
+        </p>
+        <h4 class="font-monospace mt-5" id="touch">touch</h4>
+        <p>
+            The <code>touch</code> command is used to create a file. It can be anything, from an empty txt file to an
+            empty zip file.
+            For example, <code>touch new.txt</code>.
+        </p>
+        <h4 class="font-monospace mt-5" id="man">man &amp; COMMAND --help</h4>
+        <p>
+            To learn more about a command and how to use it, use <code>man COMMAND</code>. This shows the manual pages
+            of the command. For example, <code>man cd</code> shows the manual pages of the cd command. Typing in the
+            command name and the argument <code>--help</code> will show how the command can be used.
+        </p>
+        <h4 class="font-monospace mt-5" id="cp">cp</h4>
+        <p>
+            Use <code>cp</code> command to copy files through the command line. It takes two arguments: The first is the
+            location of the file to be copied, the second is where to copy.
+        </p>
+        <h4 class="font-monospace mt-5" id="mv">mv</h4>
+        <p>
+            Use <code>mv</code> to move files through the command line. We can also use the mv command to rename a file.
+            For example, if we want to rename the file <code>text</code> to <code>new</code>, we can use <code>mv text
+            new</code>. It takes the two arguments, just like the <code>cp</code> command.
+        </p>
+        <h4 class="font-monospace mt-5" id="locate">locate</h4>
+        <p>
+            The <code>locate</code> command is used to locate a file in a Linux system, just like the search command in
+            Windows. This command is useful when you don't know where a file is saved or the actual name of the file.
+            Using the <code>-i</code> argument with the command tells it to ignore case. So, if you want a file that has
+            the word <code>hello</code>, it gives the list of all the files in your Linux system containing the word
+            <code>hello</code> when you type in <code>locate -i hello</code>. If you remember two words, you can
+            separate them using an asterisk <code>*</code>. For example, to locate a file containing the words
+            <code>hello</code> and <code>this</code>, you can use the command <code>locate -i *hello*this</code>.
+        </p>
+
+
+       </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
