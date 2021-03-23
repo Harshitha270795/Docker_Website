@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How The Internet Works</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="about.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Docker Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Docker, Linux, and Containerization
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Virtualization.html">Virtualization</a>
+                    <a class="dropdown-item" href="Containerization.html">Containerization</a>
+                    <a class="dropdown-item" href="Comparision.html">Virtualization vs Containerization</a>
+                    <a class="dropdown-item" href="WebServerTutorial.html">Web server setup using docker</a>
+                    <a class="dropdown-item" href="Linuxcommand.html">Linux commands and Docker log in</a>
+                    <a class="dropdown-item" href="Pycharm.html">Using Docker and Pycharm to write python code</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="jumbotron jumbotron-fluid" id="aboutJumbotron">
+    <div class="container">
+        <h1 class="display-4">Web Server setup on local machine using Docker</h1>
+    </div>
+</div>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-8" >
+            <p>Docker as a platform leverages containers – packages of an application along with all the tools it needs to run to
+                eliminate differences between environments.
+                In other words, containerized software will operate and can be managed consistently
+                regardless of where it is installed. Additionally, containers are much easier to set up, start, stop, and
+                maintain than good old virtual machines.
+            </p>
+            <p>Key steps involved:
+            <li>Install Docker on the computer from <a href="https://docs.docker.com/get-docker/">official website</a></li>
+            <li>After installation you can run "docker run hello-world" to test if the installation was done correctly or not.
+                If the installation was successful, you should be able to see a message like the one below</li>
+            </p>
+            <img class="img-fluid rounded" src="images/img.png">
+            <p><li> Once the installation is done, use the command "docker pull ubuntu" in the docker command window to pull an Ubuntu
+            image from DockerHub.</li>
+            <img class="img-fluid rounded" src="images/img_1.png">
+            </p>
+            <p><li> You can also use docker images to check existing Docker images on your computer.</li>
+            <img class="img-fluid rounded" src="images/img_2.png">
+            </p>
+            <p><li>Run this Ubuntu image to start a Docker container and then log into this container. Once logged in, perform the following
+            steps:</li>
+            <ol>
+                <li> Update the system using "apt -get update"</li>
+                <li>Install Apache2 server using "apt-get install apache2"</li>
+            </ol>
+            <img class="img-fluid rounded" src="images/img_3.png">
+            <br><br><br>
+            <img class="img-fluid rounded" src="images/img5.jpeg">
+            </p>
+            <p><li>Commit this Docker image and create a new Docker image which we will use with Apache server.</li>
+            <img class="img-fluid rounded" src="images/img_6.jpeg">
+            <li>Using the Vim editor in Ubuntu,create an "index.html" file</li>
+            <img class="img-fluid rounded" src="images/img8.png">
+            <br><br><br>
+            <img class="img-fluid rounded" src="images/tutorial4.jpg">
+
+            </p>
+            <p>To run a web server from Docker</p>
+            <ol>
+                <li>Start apache service using “ /etc/init.d/apache2 restart ” in your Docker container.</li>
+                <li>Type "127.0.0.1" in a browser tab of your system and you can see the web page hosted!</li>
+            </ol>
+            <img class="img-fluid rounded" src="images/tutorial5.jpg">
+            <h2>Reference</h2>
+            <ul>
+                <li><a href="https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/">https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-a-client-server-side-with-docker-compose-12c8cf0ae0aa/</a>
+                </li>
+                <li>
+                    <a href="https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm">https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm</a>
+                </li>
+            </ul>
+
+       </div>
+
+
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
